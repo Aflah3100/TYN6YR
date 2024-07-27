@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "979466727719",
+    "project_id": "ubixstar-assignment-app-acb4b",
+    "storage_bucket": "ubixstar-assignment-app-acb4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979466727719:android:0883b470b0f01622e8f902",
+        "android_client_info": {
+          "package_name": "com.example.ubixstar_assignment_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMU9-LYlUhe82_trAczuxWFwCXY3uipRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

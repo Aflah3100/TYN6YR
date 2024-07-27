@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ubixstar_assignment_app/providers/widgets_provider.dart';
+import 'package:ubixstar_assignment_app/screens/home_screen/screen_home.dart';
 import 'package:ubixstar_assignment_app/widgets/button.dart';
 
 class ScreenWidgetSelection extends StatelessWidget {
@@ -69,7 +70,10 @@ class ScreenWidgetSelection extends StatelessWidget {
             Button(
                 width: width,
                 height: height,
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (ctx) => ScreenHome()));
+                },
                 label: 'Import Widgets')
           ],
         ),
