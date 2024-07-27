@@ -14,7 +14,7 @@ class ScreenWidgetSelection extends StatelessWidget {
     final widgetsNotifier = context.read<WidgetsProvider>();
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 226, 237, 226),
+      backgroundColor: const Color.fromARGB(255, 226, 237, 226),
       body: SafeArea(
           child: Container(
         width: width,
@@ -39,6 +39,7 @@ class ScreenWidgetSelection extends StatelessWidget {
                 selector: (ctx, widgetsProvider) =>
                     widgetsProvider.getTextWidgetSelector()),
             SizedBox(height: height * 0.05),
+
             Selector<WidgetsProvider, bool>(
                 builder: (ctx, val, _) {
                   return WidgetSelectorButton(
@@ -53,6 +54,7 @@ class ScreenWidgetSelection extends StatelessWidget {
                 selector: (ctx, widgetsProvider) =>
                     widgetsProvider.getImageWidgetSelector()),
             SizedBox(height: height * 0.05),
+
             Selector<WidgetsProvider, bool>(
                 builder: (ctx, val, _) {
                   return WidgetSelectorButton(
@@ -72,7 +74,7 @@ class ScreenWidgetSelection extends StatelessWidget {
                 height: height,
                 onTap: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (ctx) => ScreenHome()));
+                      MaterialPageRoute(builder: (ctx) => const ScreenHome()));
                 },
                 label: 'Import Widgets')
           ],

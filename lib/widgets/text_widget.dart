@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ubixstar_assignment_app/firebase/functions/firebase_functions.dart';
 
 class TextWidget extends StatelessWidget {
   const TextWidget({
@@ -14,6 +15,11 @@ class TextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FirebaseFunctions.instance.fetchText().then((res) {
+      if (res is String) {
+        textController.text = res;
+      }
+    });
     return Container(
       width: width * 0.72,
       height: height * 0.06,

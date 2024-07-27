@@ -48,21 +48,11 @@ class FirebaseFunctions {
         .set({'imageurl': imageUrl});
   }
 
-  Future<dynamic> fetchImageUrl() async {
-    try {
-      DocumentSnapshot documentSnapshot = await FirebaseFirestore.instance
-          .collection(_collection)
-          .doc(_imageDocKey)
-          .get();
-
-      if (documentSnapshot.exists) {
-        return documentSnapshot['imageUrl'].toString();
-      } else {
-        return false;
-      }
-    } on FirebaseException catch (e) {
-      return e;
-    }
+  Stream<DocumentSnapshot> fetchImageUrl() {
+    return FirebaseFirestore.instance
+        .collection(_collection)
+        .doc(_imageDocKey)
+        .snapshots();
   }
 
   Future<dynamic> fetchText() async {

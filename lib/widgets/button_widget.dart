@@ -23,6 +23,9 @@ class ButtonWidget extends StatelessWidget {
             !widgetsNotifier.getTextWidgetSelector()) {
           widgetsNotifier.setsavedButtonClickedAlone(true);
         } else {
+          bool imageSuccess = false;
+          bool textSuccess = false;
+          //Upload-image-widget
           if (widgetsNotifier.getImageWidgetSelector()) {
             if (imageNotifier.getImageFile() != null) {
               final result = await FirebaseFunctions.instance
@@ -31,8 +34,31 @@ class ButtonWidget extends StatelessWidget {
               if (result is String) {
                 //upload-success
                 imageNotifier.setSavedImageUrl(result);
+                imageSuccess = true;
               }
             }
+          }
+          //Text-wiget
+          if (widgetsNotifier.getTextWidgetSelector()) {
+            if (textController.text.isNotEmpty) {
+              final result = await FirebaseFunctions.instance
+                  .addTextToFirebase(textController.text);
+
+              if (result is bool) {
+                //upload-success
+                textSuccess = true;
+              }
+            }
+          }
+
+          if (textSuccess || imageSuccess) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                backgroundColor: const Color.fromARGB(255, 195, 231, 197),
+                content: Center(
+                    child: Text(
+                  'Successfully Saved',
+                  style: TextStyle(color: Colors.green[900], fontSize: 17.0),
+                ))));
           }
         }
       },

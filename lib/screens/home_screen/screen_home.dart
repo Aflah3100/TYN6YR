@@ -1,8 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ubixstar_assignment_app/firebase/functions/firebase_functions.dart';
-import 'package:ubixstar_assignment_app/providers/firebase_provider.dart';
 import 'package:ubixstar_assignment_app/providers/widgets_provider.dart';
 import 'package:ubixstar_assignment_app/screens/widget_selection_screen/widget_selection_screen.dart';
 import 'package:ubixstar_assignment_app/widgets/button.dart';
@@ -20,12 +17,14 @@ class ScreenHome extends StatefulWidget {
 class _ScreenHomeState extends State<ScreenHome> {
   final textController = TextEditingController();
 
+
   @override
   void initState() {
     super.initState();
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final widgetsNotifier = context.read<WidgetsProvider>();
+
       if (widgetsNotifier.getImageWidgetSelector() ||
           widgetsNotifier.getTextWidgetSelector()) {
         widgetsNotifier.setsavedButtonClickedAlone(false);
@@ -35,8 +34,6 @@ class _ScreenHomeState extends State<ScreenHome> {
 
   @override
   Widget build(BuildContext context) {
-    final firebaseNotifer = context.read<FirebaseProvider>();
-
     final height = MediaQuery.of(context).size.height * 1;
     final width = MediaQuery.of(context).size.width * 1;
     return Scaffold(
