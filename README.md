@@ -1,16 +1,18 @@
-# ubixstar_assignment_app
+# Ubixstar Assignment App
 
-A new Flutter project.
+Ubixstar assignment app built using flutter and firebase.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Home Screen**: Displays all the widgets that the user adds. The user will be routed to the Widget selection screen when clicking the Add Widget button.
+- **Widget Selection Screen**: User can import a widget, by clicking on it. When clicking the Import widgets button, the selected widgets get imported to the home screen. 
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## State Management
+The entire app state is managed using `Provider`.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## Screenshots
+
+
