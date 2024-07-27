@@ -1,6 +1,6 @@
 # Ubixstar Assignment App
 
-Ubixstar assignment app built using flutter and firebase.
+Ubixstar assignment app built using Flutter and Firebase.
 
 ## Features
 
@@ -12,7 +12,19 @@ Ubixstar assignment app built using flutter and firebase.
 The entire app state is managed using `Provider`.
 
 
-
 ## Screenshots
+
+<img src="screenshots/pic_1.png"  width="300"/>
+
+<img src="screenshots/pic_2.png"  width="300"/>
+
+
+<img src="screenshots/pic_3.png"  width="300"/>
+
+
+<img src="screenshots/pic_4.png"  width="300"/>
+
+
+<img src="screenshots/pic_5.png"  width="300"/>
 
 
